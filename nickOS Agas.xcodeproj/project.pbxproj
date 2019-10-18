@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12BE49EB688583736AE42E49 /* Pods_nickOS_Agas_nickOS_AgasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267FBDC0D359D64C00E5A13F /* Pods_nickOS_Agas_nickOS_AgasUITests.framework */; };
 		49BD757E2359E95A001F458E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD757D2359E95A001F458E /* AppDelegate.swift */; };
 		49BD75802359E95A001F458E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD757F2359E95A001F458E /* SceneDelegate.swift */; };
-		49BD75822359E95A001F458E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75812359E95A001F458E /* FirstViewController.swift */; };
-		49BD75842359E95A001F458E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75832359E95A001F458E /* SecondViewController.swift */; };
+		49BD75822359E95A001F458E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75812359E95A001F458E /* HomeViewController.swift */; };
+		49BD75842359E95A001F458E /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75832359E95A001F458E /* PostsViewController.swift */; };
 		49BD75872359E95A001F458E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BD75852359E95A001F458E /* Main.storyboard */; };
 		49BD75892359E95B001F458E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BD75882359E95B001F458E /* Assets.xcassets */; };
 		49BD758C2359E95B001F458E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BD758A2359E95B001F458E /* LaunchScreen.storyboard */; };
 		49BD75972359E95B001F458E /* nickOS_AgasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75962359E95B001F458E /* nickOS_AgasTests.swift */; };
 		49BD75A22359E95B001F458E /* nickOS_AgasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75A12359E95B001F458E /* nickOS_AgasUITests.swift */; };
+		B183D9F8994CCBDEE9C089EC /* Pods_nickOS_AgasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E904FE4A8EF5EBA7719489 /* Pods_nickOS_AgasTests.framework */; };
+		B6F2B7FC06BE67E8EEAD14F2 /* Pods_nickOS_Agas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01E904FE4A8EF5EBA7719489 /* Pods_nickOS_AgasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_AgasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		267FBDC0D359D64C00E5A13F /* Pods_nickOS_Agas_nickOS_AgasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_Agas_nickOS_AgasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		269A09CA55D244C6D0432672 /* Pods-nickOS AgasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS AgasTests.release.xcconfig"; path = "Target Support Files/Pods-nickOS AgasTests/Pods-nickOS AgasTests.release.xcconfig"; sourceTree = "<group>"; };
+		30339FDFCB99ED2F676783D4 /* Pods-nickOS Agas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas.release.xcconfig"; path = "Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas.release.xcconfig"; sourceTree = "<group>"; };
 		49BD757A2359E95A001F458E /* nickOS Agas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nickOS Agas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BD757D2359E95A001F458E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BD757F2359E95A001F458E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49BD75812359E95A001F458E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		49BD75832359E95A001F458E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		49BD75812359E95A001F458E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		49BD75832359E95A001F458E /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		49BD75862359E95A001F458E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49BD75882359E95B001F458E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BD758B2359E95B001F458E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,11 @@
 		49BD759D2359E95B001F458E /* nickOS AgasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nickOS AgasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BD75A12359E95B001F458E /* nickOS_AgasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nickOS_AgasUITests.swift; sourceTree = "<group>"; };
 		49BD75A32359E95B001F458E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49FD2A59EC22DC8489FCEEE9 /* Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_Agas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas.debug.xcconfig"; sourceTree = "<group>"; };
+		C7837A1FB277494B847EE9B3 /* Pods-nickOS Agas-nickOS AgasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas-nickOS AgasUITests.release.xcconfig"; path = "Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D022C654AC199197ACF301DE /* Pods-nickOS AgasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS AgasTests.debug.xcconfig"; path = "Target Support Files/Pods-nickOS AgasTests/Pods-nickOS AgasTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F2B7FC06BE67E8EEAD14F2 /* Pods_nickOS_Agas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B183D9F8994CCBDEE9C089EC /* Pods_nickOS_AgasTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12BE49EB688583736AE42E49 /* Pods_nickOS_Agas_nickOS_AgasUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				49BD75952359E95B001F458E /* nickOS AgasTests */,
 				49BD75A02359E95B001F458E /* nickOS AgasUITests */,
 				49BD757B2359E95A001F458E /* Products */,
+				9D85C907FCD254A28048968C /* Pods */,
+				64631248B76AB5EDEF993D21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +118,12 @@
 		49BD757C2359E95A001F458E /* nickOS Agas */ = {
 			isa = PBXGroup;
 			children = (
+				49BD75B22359EAB5001F458E /* adapter */,
+				49BD75B12359EA9E001F458E /* models */,
+				49BD75B02359EA90001F458E /* service */,
+				49BD75AF2359EA7E001F458E /* ui */,
+				49BD75B32359EAC9001F458E /* utils */,
 				49BD757D2359E95A001F458E /* AppDelegate.swift */,
-				49BD757F2359E95A001F458E /* SceneDelegate.swift */,
-				49BD75812359E95A001F458E /* FirstViewController.swift */,
-				49BD75832359E95A001F458E /* SecondViewController.swift */,
-				49BD75852359E95A001F458E /* Main.storyboard */,
 				49BD75882359E95B001F458E /* Assets.xcassets */,
 				49BD758A2359E95B001F458E /* LaunchScreen.storyboard */,
 				49BD758D2359E95B001F458E /* Info.plist */,
@@ -131,6 +149,85 @@
 			path = "nickOS AgasUITests";
 			sourceTree = "<group>";
 		};
+		49BD75AF2359EA7E001F458E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				49BD757F2359E95A001F458E /* SceneDelegate.swift */,
+				49BD75852359E95A001F458E /* Main.storyboard */,
+				49BD75B52359EB21001F458E /* posts */,
+				49BD75B42359EB1B001F458E /* home */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		49BD75B02359EA90001F458E /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		49BD75B12359EA9E001F458E /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		49BD75B22359EAB5001F458E /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = adapter;
+			sourceTree = "<group>";
+		};
+		49BD75B32359EAC9001F458E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		49BD75B42359EB1B001F458E /* home */ = {
+			isa = PBXGroup;
+			children = (
+				49BD75812359E95A001F458E /* HomeViewController.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		49BD75B52359EB21001F458E /* posts */ = {
+			isa = PBXGroup;
+			children = (
+				49BD75832359E95A001F458E /* PostsViewController.swift */,
+			);
+			path = posts;
+			sourceTree = "<group>";
+		};
+		64631248B76AB5EDEF993D21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */,
+				267FBDC0D359D64C00E5A13F /* Pods_nickOS_Agas_nickOS_AgasUITests.framework */,
+				01E904FE4A8EF5EBA7719489 /* Pods_nickOS_AgasTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D85C907FCD254A28048968C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */,
+				30339FDFCB99ED2F676783D4 /* Pods-nickOS Agas.release.xcconfig */,
+				49FD2A59EC22DC8489FCEEE9 /* Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig */,
+				C7837A1FB277494B847EE9B3 /* Pods-nickOS Agas-nickOS AgasUITests.release.xcconfig */,
+				D022C654AC199197ACF301DE /* Pods-nickOS AgasTests.debug.xcconfig */,
+				269A09CA55D244C6D0432672 /* Pods-nickOS AgasTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49BD75A62359E95B001F458E /* Build configuration list for PBXNativeTarget "nickOS Agas" */;
 			buildPhases = (
+				B8B6F4126BB33A1E2F01ED44 /* [CP] Check Pods Manifest.lock */,
 				49BD75762359E95A001F458E /* Sources */,
 				49BD75772359E95A001F458E /* Frameworks */,
 				49BD75782359E95A001F458E /* Resources */,
@@ -155,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49BD75A92359E95B001F458E /* Build configuration list for PBXNativeTarget "nickOS AgasTests" */;
 			buildPhases = (
+				1B3E963D35DBEA2F6AF411D8 /* [CP] Check Pods Manifest.lock */,
 				49BD758E2359E95B001F458E /* Sources */,
 				49BD758F2359E95B001F458E /* Frameworks */,
 				49BD75902359E95B001F458E /* Resources */,
@@ -173,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49BD75AC2359E95B001F458E /* Build configuration list for PBXNativeTarget "nickOS AgasUITests" */;
 			buildPhases = (
+				45A2796F4D47EA6D83F94A5F /* [CP] Check Pods Manifest.lock */,
 				49BD75992359E95B001F458E /* Sources */,
 				49BD759A2359E95B001F458E /* Frameworks */,
 				49BD759B2359E95B001F458E /* Resources */,
@@ -257,13 +357,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B3E963D35DBEA2F6AF411D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nickOS AgasTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45A2796F4D47EA6D83F94A5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nickOS Agas-nickOS AgasUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8B6F4126BB33A1E2F01ED44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nickOS Agas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49BD75762359E95A001F458E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49BD75842359E95A001F458E /* SecondViewController.swift in Sources */,
-				49BD75822359E95A001F458E /* FirstViewController.swift in Sources */,
+				49BD75842359E95A001F458E /* PostsViewController.swift in Sources */,
+				49BD75822359E95A001F458E /* HomeViewController.swift in Sources */,
 				49BD757E2359E95A001F458E /* AppDelegate.swift in Sources */,
 				49BD75802359E95A001F458E /* SceneDelegate.swift in Sources */,
 			);
@@ -436,6 +605,7 @@
 		};
 		49BD75A72359E95B001F458E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +623,7 @@
 		};
 		49BD75A82359E95B001F458E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30339FDFCB99ED2F676783D4 /* Pods-nickOS Agas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +641,7 @@
 		};
 		49BD75AA2359E95B001F458E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D022C654AC199197ACF301DE /* Pods-nickOS AgasTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +663,7 @@
 		};
 		49BD75AB2359E95B001F458E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 269A09CA55D244C6D0432672 /* Pods-nickOS AgasTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +685,7 @@
 		};
 		49BD75AD2359E95B001F458E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FD2A59EC22DC8489FCEEE9 /* Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +705,7 @@
 		};
 		49BD75AE2359E95B001F458E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7837A1FB277494B847EE9B3 /* Pods-nickOS Agas-nickOS AgasUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
