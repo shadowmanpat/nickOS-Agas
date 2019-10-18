@@ -263,6 +263,7 @@
 				49BD75762359E95A001F458E /* Sources */,
 				49BD75772359E95A001F458E /* Frameworks */,
 				49BD75782359E95A001F458E /* Resources */,
+				14F1C884E98DEF224ADDC3D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,6 +301,7 @@
 				49BD75992359E95B001F458E /* Sources */,
 				49BD759A2359E95B001F458E /* Frameworks */,
 				49BD759B2359E95B001F458E /* Resources */,
+				0F1E9BA8D62D2A9CC22F81BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,6 +384,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0F1E9BA8D62D2A9CC22F81BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14F1C884E98DEF224ADDC3D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1B3E963D35DBEA2F6AF411D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

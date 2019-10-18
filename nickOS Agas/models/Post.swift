@@ -16,136 +16,68 @@ import Foundation
 struct Post: Codable {
     let id: Int?
     let date, dateGmt: String?
-    let guid: GUID?
+    let guid: String?
     let modified, modifiedGmt, slug: String?
-    let status: StatusEnum?
-    let type: TypeEnum?
+    let status: String?
+    let type: String?
     let link: String?
-    let title: GUID?
-    let content, excerpt: Content?
+    let title: String?
+    let content, excerpt: String?
     let author, featuredMedia: Int?
-    let commentStatus, pingStatus: Status?
+    let commentStatus, pingStatus: String?
     let sticky: Bool?
     let template: String?
-    let format: Format?
-    let meta: Meta?
+    let format: String?
     let categories: [Int]?
-    let tags: [Any?]?
     let jetpackFeaturedMediaURL: String?
-    let jetpackPublicizeConnections: [Any?]?
     let jetpackSharingEnabled: Bool?
     let jetpackShortlink: String?
     let jetpackRelatedPosts: [JetpackRelatedPost]?
     let links: Links?
 }
 
-enum Status {
-    case statusOpen
-}
 
-// MARK: - Content
-struct Content {
-    let rendered: String?
-    let protected: Bool?
-}
 
-enum Format {
-    case standard
-}
 
-// MARK: - GUID
-struct GUID {
-    let rendered: String?
-}
 
 // MARK: - JetpackRelatedPost
-struct JetpackRelatedPost {
+struct JetpackRelatedPost: Codable {
     let id: Int?
     let url: String?
     let urlMeta: URLMeta?
     let title, date: String?
     let format: Bool?
     let excerpt: String?
-    let rel: Rel?
+    let rel: String?
     let context: String?
     let img: Img?
-    let classes: [Any?]?
 }
 
 // MARK: - Img
-struct Img {
+struct Img : Codable{
     let altText: String?
     let src: String?
     let width, height: Int?
 }
 
-enum Rel {
-    case nofollow
-}
+
 
 // MARK: - URLMeta
-struct URLMeta {
+struct URLMeta : Codable{
     let origin, position: Int?
 }
 
 
 
 
-// MARK: - Author
-struct Author {
-    let embeddable: Bool?
-    let href: String?
-}
 
-// MARK: - Cury
-struct Cury {
-    let name: Name?
-    let href: Href?
-    let templated: Bool?
-}
-
-enum Href {
-    case httpsAPIWOrgRel
-}
-
-enum Name {
-    case wp
-}
-
-// MARK: - PredecessorVersion
-struct PredecessorVersion {
-    let id: Int?
-    let href: String?
-}
-
-// MARK: - VersionHistory
-struct VersionHistory {
-    let count: Int?
-    let href: String?
-}
 
 // MARK: - WpTerm
-struct WpTerm {
+struct WpTerm : Codable{
     let taxonomy: Taxonomy?
     let embeddable: Bool?
     let href: String?
 }
 
-enum Taxonomy {
-    case category
-    case postTag
-}
 
-// MARK: - Meta
-struct Meta {
-    let spayEmail, jetpackPublicizeMessage: String?
-}
-
-enum StatusEnum {
-    case publish
-}
-
-enum TypeEnum {
-    case post
-}
 

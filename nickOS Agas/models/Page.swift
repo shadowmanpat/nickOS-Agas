@@ -10,7 +10,7 @@ import Foundation
 
 
 // MARK: - Page
-struct Page {
+struct Page : Codable{
     let id: Int?
     let date, dateGmt: String?
     let guid: GUID?
@@ -29,56 +29,39 @@ struct Page {
 
 
 // MARK: - Content
-struct Content {
+struct Content: Codable {
     let rendered: String?
     let protected: Bool?
 }
 
 // MARK: - GUID
-struct GUID {
+struct GUID: Codable {
     let rendered: String?
 }
 
-// MARK: - Links
-struct Links {
-    let linksSelf, collection, about: [About]?
-    let author, replies: [Author]?
-    let versionHistory: [VersionHistory]?
-    let predecessorVersion: [PredecessorVersion]?
-    let wpAttachment: [About]?
-    let curies: [Cury]?
-}
 
-// MARK: - About
-struct About {
-    let href: String?
-}
 
 // MARK: - Author
-struct Author {
+struct Author: Codable {
     let embeddable: Bool?
     let href: String?
 }
 
-// MARK: - Cury
-struct Cury {
-    let name, href: String?
-    let templated: Bool?
-}
+
 
 // MARK: - PredecessorVersion
-struct PredecessorVersion {
+struct PredecessorVersion : Codable{
     let id: Int?
     let href: String?
 }
 
 // MARK: - VersionHistory
-struct VersionHistory {
+struct VersionHistory : Codable{
     let count: Int?
     let href: String?
 }
 
 // MARK: - Meta
-struct Meta {
+struct Meta: Codable {
     let spayEmail: String?
 }
