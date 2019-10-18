@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		12BE49EB688583736AE42E49 /* Pods_nickOS_Agas_nickOS_AgasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267FBDC0D359D64C00E5A13F /* Pods_nickOS_Agas_nickOS_AgasUITests.framework */; };
+		497A2DA52359F78D00077AC8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DA42359F78D00077AC8 /* Page.swift */; };
+		497A2DA82359F80A00077AC8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DA72359F80A00077AC8 /* Post.swift */; };
+		497A2DAB2359F88B00077AC8 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DAA2359F88B00077AC8 /* Categories.swift */; };
 		49BD757E2359E95A001F458E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD757D2359E95A001F458E /* AppDelegate.swift */; };
 		49BD75802359E95A001F458E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD757F2359E95A001F458E /* SceneDelegate.swift */; };
 		49BD75822359E95A001F458E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75812359E95A001F458E /* HomeViewController.swift */; };
@@ -43,6 +46,9 @@
 		267FBDC0D359D64C00E5A13F /* Pods_nickOS_Agas_nickOS_AgasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_Agas_nickOS_AgasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269A09CA55D244C6D0432672 /* Pods-nickOS AgasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS AgasTests.release.xcconfig"; path = "Target Support Files/Pods-nickOS AgasTests/Pods-nickOS AgasTests.release.xcconfig"; sourceTree = "<group>"; };
 		30339FDFCB99ED2F676783D4 /* Pods-nickOS Agas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas.release.xcconfig"; path = "Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas.release.xcconfig"; sourceTree = "<group>"; };
+		497A2DA42359F78D00077AC8 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		497A2DA72359F80A00077AC8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		497A2DAA2359F88B00077AC8 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		49BD757A2359E95A001F458E /* nickOS Agas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nickOS Agas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BD757D2359E95A001F458E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BD757F2359E95A001F458E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		497A2DA62359F7A900077AC8 /* posts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = posts;
+			sourceTree = "<group>";
+		};
+		497A2DA92359F87C00077AC8 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = categories;
+			sourceTree = "<group>";
+		};
 		49BD75712359E959001F458E = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +190,11 @@
 		49BD75B12359EA9E001F458E /* models */ = {
 			isa = PBXGroup;
 			children = (
+				497A2DAA2359F88B00077AC8 /* Categories.swift */,
+				497A2DA72359F80A00077AC8 /* Post.swift */,
+				497A2DA92359F87C00077AC8 /* categories */,
+				497A2DA62359F7A900077AC8 /* posts */,
+				497A2DA42359F78D00077AC8 /* Page.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -224,7 +249,6 @@
 				D022C654AC199197ACF301DE /* Pods-nickOS AgasTests.debug.xcconfig */,
 				269A09CA55D244C6D0432672 /* Pods-nickOS AgasTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -432,9 +456,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BD75842359E95A001F458E /* PostsViewController.swift in Sources */,
+				497A2DAB2359F88B00077AC8 /* Categories.swift in Sources */,
 				49BD75822359E95A001F458E /* HomeViewController.swift in Sources */,
 				49BD757E2359E95A001F458E /* AppDelegate.swift in Sources */,
+				497A2DA82359F80A00077AC8 /* Post.swift in Sources */,
 				49BD75802359E95A001F458E /* SceneDelegate.swift in Sources */,
+				497A2DA52359F78D00077AC8 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
