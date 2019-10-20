@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		497A2DA52359F78D00077AC8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DA42359F78D00077AC8 /* Page.swift */; };
 		497A2DA82359F80A00077AC8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DA72359F80A00077AC8 /* Post.swift */; };
 		497A2DAB2359F88B00077AC8 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DAA2359F88B00077AC8 /* Categories.swift */; };
+		497A2DAD235A178B00077AC8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DAC235A178B00077AC8 /* HomeViewModel.swift */; };
+		497A2DB0235B3D8E00077AC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DAF235B3D8E00077AC8 /* Constants.swift */; };
+		497A2DB2235B3E9E00077AC8 /* WordpressApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DB1235B3E9E00077AC8 /* WordpressApi.swift */; };
+		497A2DB8235B4B6700077AC8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A2DB6235B4B6700077AC8 /* WebViewController.swift */; };
 		49BD757E2359E95A001F458E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD757D2359E95A001F458E /* AppDelegate.swift */; };
 		49BD75802359E95A001F458E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD757F2359E95A001F458E /* SceneDelegate.swift */; };
 		49BD75822359E95A001F458E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75812359E95A001F458E /* HomeViewController.swift */; };
@@ -49,6 +53,10 @@
 		497A2DA42359F78D00077AC8 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		497A2DA72359F80A00077AC8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		497A2DAA2359F88B00077AC8 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		497A2DAC235A178B00077AC8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		497A2DAF235B3D8E00077AC8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		497A2DB1235B3E9E00077AC8 /* WordpressApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordpressApi.swift; sourceTree = "<group>"; };
+		497A2DB6235B4B6700077AC8 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		49BD757A2359E95A001F458E /* nickOS Agas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nickOS Agas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BD757D2359E95A001F458E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BD757F2359E95A001F458E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,18 +107,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		497A2DA62359F7A900077AC8 /* posts */ = {
+		497A2DAE235B3D5800077AC8 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				49BD75882359E95B001F458E /* Assets.xcassets */,
+				497A2DAF235B3D8E00077AC8 /* Constants.swift */,
 			);
-			path = posts;
-			sourceTree = "<group>";
-		};
-		497A2DA92359F87C00077AC8 /* categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = categories;
+			path = resources;
 			sourceTree = "<group>";
 		};
 		49BD75712359E959001F458E = {
@@ -144,7 +147,7 @@
 				49BD75AF2359EA7E001F458E /* ui */,
 				49BD75B32359EAC9001F458E /* utils */,
 				49BD757D2359E95A001F458E /* AppDelegate.swift */,
-				49BD75882359E95B001F458E /* Assets.xcassets */,
+				497A2DAE235B3D5800077AC8 /* resources */,
 				49BD758A2359E95B001F458E /* LaunchScreen.storyboard */,
 				49BD758D2359E95B001F458E /* Info.plist */,
 			);
@@ -183,6 +186,7 @@
 		49BD75B02359EA90001F458E /* service */ = {
 			isa = PBXGroup;
 			children = (
+				497A2DB1235B3E9E00077AC8 /* WordpressApi.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -192,8 +196,6 @@
 			children = (
 				497A2DAA2359F88B00077AC8 /* Categories.swift */,
 				497A2DA72359F80A00077AC8 /* Post.swift */,
-				497A2DA92359F87C00077AC8 /* categories */,
-				497A2DA62359F7A900077AC8 /* posts */,
 				497A2DA42359F78D00077AC8 /* Page.swift */,
 			);
 			path = models;
@@ -217,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				49BD75812359E95A001F458E /* HomeViewController.swift */,
+				497A2DAC235A178B00077AC8 /* HomeViewModel.swift */,
+				497A2DB6235B4B6700077AC8 /* WebViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -492,12 +496,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BD75842359E95A001F458E /* PostsViewController.swift in Sources */,
+				497A2DB8235B4B6700077AC8 /* WebViewController.swift in Sources */,
 				497A2DAB2359F88B00077AC8 /* Categories.swift in Sources */,
 				49BD75822359E95A001F458E /* HomeViewController.swift in Sources */,
+				497A2DAD235A178B00077AC8 /* HomeViewModel.swift in Sources */,
 				49BD757E2359E95A001F458E /* AppDelegate.swift in Sources */,
 				497A2DA82359F80A00077AC8 /* Post.swift in Sources */,
+				497A2DB2235B3E9E00077AC8 /* WordpressApi.swift in Sources */,
 				49BD75802359E95A001F458E /* SceneDelegate.swift in Sources */,
 				497A2DA52359F78D00077AC8 /* Page.swift in Sources */,
+				497A2DB0235B3D8E00077AC8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,12 +17,20 @@ struct Category : Codable {
 }
 
 // MARK: - Links
-struct Links  :Codable{
-    let linksSelf, collection, about, wpPostType: [About]?
-    let curies: [Cury]?
+// MARK: - Links
+struct Links: Codable {
+    let linksSelf, collection, about: [About]?
     let up: [Up]?
-}
+    let wpPostType: [About]?
+    let curies: [Cury]?
 
+    enum CodingKeys: String, CodingKey {
+        case linksSelf = "self"
+        case collection, about, up
+        case wpPostType = "wp:post_type"
+        case curies
+    }
+}
 // MARK: - About
 struct About  :Codable{
     let href: String?

@@ -5,6 +5,9 @@ target 'nickOS Agas' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'Observable'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
   # Pods for nickOS Agas
 
