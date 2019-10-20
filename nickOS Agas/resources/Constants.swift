@@ -14,6 +14,10 @@ struct Wordpress {
    static let baseURL = "http://www.nickagas.com/wp-json/wp/v2"
     static let pageUrl = "/pages/"
     static let ctegoriesUrl = "/categories?page="
+    static let postsUrl = "/posts?"
+    static let categories = "&categories="
+    static let page = "&page="
+    static let search = "&search="
 }
 
 

@@ -17,40 +17,10 @@ struct Category : Codable {
     let links: Links?
 }
 
-// MARK: - Links
-// MARK: - Links
-struct Links: Codable {
-    let linksSelf, collection, about: [About]?
-    let up: [Up]?
-    let wpPostType: [About]?
-    let curies: [Cury]?
 
-    enum CodingKeys: String, CodingKey {
-        case linksSelf = "self"
-        case collection, about, up
-        case wpPostType = "wp:post_type"
-        case curies
-    }
-}
-// MARK: - About
-struct About  :Codable{
-    let href: String?
-}
 
-// MARK: - Cury
-struct Cury  :Codable{
-    let name: Name?
-    let href: Href?
-    let templated: Bool?
-}
 
-enum Href :String,Codable {
-    case httpsAPIWOrgRel
-}
 
-enum Name :String,Codable{
-    case wp
-}
 
 // MARK: - Up
 struct Up :Codable{
@@ -58,6 +28,3 @@ struct Up :Codable{
     let href: String?
 }
 
-enum Taxonomy :String,Codable{
-    case category
-}

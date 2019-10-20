@@ -28,40 +28,6 @@ struct Page : Codable{
 }
 
 
-// MARK: - Content
-struct Content: Codable {
-    let rendered: String?
-    let protected: Bool?
-}
-
-// MARK: - GUID
-struct GUID: Codable {
-    let rendered: String?
-}
 
 
 
-// MARK: - Author
-struct Author: Codable {
-    let embeddable: Bool?
-    let href: String?
-}
-
-
-
-// MARK: - PredecessorVersion
-struct PredecessorVersion : Codable{
-    let id: Int?
-    let href: String?
-}
-
-// MARK: - VersionHistory
-struct VersionHistory : Codable{
-    let count: Int?
-    let href: String?
-}
-
-// MARK: - Meta
-struct Meta: Codable {
-    let spayEmail: String?
-}

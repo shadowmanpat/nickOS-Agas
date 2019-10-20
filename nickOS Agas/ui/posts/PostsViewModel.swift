@@ -12,14 +12,20 @@ import RxCocoa
 
 class PostsViewModel{
     
-    var category : Variable<Int?>? = Variable(nil)
+    var loading: Variable<Bool> = Variable(false)
+       
+
+      
+       func setLoading(load : Bool)  {
+           loading.value = load
+          
+       }
+    
+  
     var categories : Variable<[Category]> = Variable([Category]())
     var currentCategoryPage = 1
+    var posts: Variable<[PostElement]> = Variable([PostElement]())
     
-    
-    func loadNextCategories(){
-        
-    }
     func getCategories(){
         if(self.currentCategoryPage <= 0 ){
             return
@@ -34,6 +40,39 @@ class PostsViewModel{
                     self.currentCategoryPage += 1
                 }
             }
+    }
+    
+    var category : Variable<Int?>? = Variable(nil)
+    var search: String = ""
+    var postsPage = 1
+    
+    func selectCategory(byId category : Int){
+        self.category?.value = category
+        self.search = ""
+        self.postsPage = 1
+        getPosts()
+//        self.currentCategoryPage
+    }
+    func setSearch(search : String ){
+            self.category?.value = nil
+              self.search = search
+              self.postsPage = 1
+              getPosts()
+    }
+    
+    func getPosts(){
+        if(self.postsPage<=0) {
+            return
+        }
+        let networkManager = NetworkManager()
+        networkManager.getPosts(categoryId: category?.value, page: postsPage, search: search) { (posts) in
+            self.posts.value += posts ?? [PostElement]()
+            if(posts?.count == 0){
+                self.postsPage = -1
+            }else {
+                self.postsPage += 1
+            }
+        }
     }
     
 }
