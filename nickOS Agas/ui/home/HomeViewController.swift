@@ -20,11 +20,13 @@ class HomeViewController: UIViewController {
         print("loadingIndicator")
 //        loadingIndicator.isHidden = !homeViewModel.loading
     }
-    
+    override func viewDidDisappear(_ animated: Bool) {
+        disposeBag = DisposeBag()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindLoadingIndicator()
+        
         homeViewModel.loading.asObservable().subscribe(onNext: { (loading) in
             print("asObservable "+String(loading))
             self.loadingIndicator.isHidden =  !loading
@@ -37,23 +39,9 @@ class HomeViewController: UIViewController {
         }.disposed(by: disposeBag)
         // Do any additional setup after loading the view.
            setUI()
-//        homeViewModel.isLoading.observe(DispatchQueue.main) { loading , loadingNull  in
-//        // handle new position
-//            print("observe ")
-//            self.loadingIndicator.isHidden = !loading
-//
-//        }
-//        homeViewModel.isLoading.observe { p,p2  in
-//            // handle new position
-//            print("observe2 ")
-//            self.loadingIndicator.isHidden = !(p2 ?? true)
-//        }
-
         
     }
-    func bindLoadingIndicator(){
-        
-    }
+   
 
     
     @IBAction func contactMePressed(_ sender: Any) {

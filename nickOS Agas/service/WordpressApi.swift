@@ -28,4 +28,22 @@ class NetworkManager: NSObject {
                         }
         }
     }
-}
+    
+    func getCategories(byPageID pageID: Int, completion: @escaping (CategoryResponse?) -> Void){
+        let urlString = Wordpress.baseURL + Wordpress.ctegoriesUrl+String(pageID)
+        print(urlString)
+        AF.request(urlString).response{repsonse in
+            guard let data = repsonse.data else {return}
+            do {
+                                      let decoder = JSONDecoder()
+                                      let categories  = try decoder.decode(CategoryResponse.self, from: data)
+                                      completion(categories)
+                                  } catch let error {
+                                      print(error)
+                                      completion(nil)
+                                  }
+                  }
+            
+        }
+    }
+

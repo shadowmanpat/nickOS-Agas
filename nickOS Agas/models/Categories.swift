@@ -5,6 +5,7 @@
 
 import Foundation
 
+typealias CategoryResponse = [Category]
 // MARK: - CategoryElement
 struct Category : Codable {
     let id, count: Int?

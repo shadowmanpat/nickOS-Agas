@@ -13,6 +13,7 @@ struct Wordpress {
     ///wp-json/wp/v2/pages/61
    static let baseURL = "http://www.nickagas.com/wp-json/wp/v2"
     static let pageUrl = "/pages/"
+    static let ctegoriesUrl = "/categories?page="
 }
 
 
