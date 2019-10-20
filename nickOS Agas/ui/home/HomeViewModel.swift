@@ -53,7 +53,12 @@ class HomeViewModel {
                 guard let data = post?.content?.rendered else {return}
                 self.dataToShow = data
                 
-                vc.performSegue(withIdentifier: "webViewVC", sender: self)
+                let webVeiwVC : WebViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "webViewVC") as! WebViewController
+                webVeiwVC.data = data
+                    
+                vc.present(webVeiwVC, animated: true, completion: nil)
+                
+//                vc.performSegue(withIdentifier: "webViewVC", sender: self)
             }
     //        webViewVC
             

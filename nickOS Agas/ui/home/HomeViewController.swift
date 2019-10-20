@@ -69,12 +69,12 @@ class HomeViewController: UIViewController {
     
    
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "webViewVC" {
-            let vc = segue.destination as! WebViewController
-            vc.data = self.homeViewModel.dataToShow ?? ""
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "webViewVC" {
+//            let vc = segue.destination as! WebViewController
+//            vc.data = self.homeViewModel.dataToShow ?? ""
+//        }
+//    }
 
     
 }

@@ -87,7 +87,7 @@
         <!--Web View Controller-->
         <scene sceneID="xSJ-Xg-YLM">
             <objects>
-                <viewController id="Vvm-BM-zg0" customClass="WebViewController" customModule="nickOS_Agas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webViewVC" id="Vvm-BM-zg0" customClass="WebViewController" customModule="nickOS_Agas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b1z-7f-kVE" customClass="We">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
