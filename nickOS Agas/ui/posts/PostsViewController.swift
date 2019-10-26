@@ -22,6 +22,7 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
+    @IBOutlet weak var poad: UIActivityIndicatorView!
     @IBOutlet weak var postsUITableView: UITableView!
     
     override func viewDidLoad() {
@@ -53,6 +54,19 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
                       }) {
                           
                }.disposed(by: disposeBag)
+        postsViewModel.loading.asObservable().subscribe(onNext : {(loading) in
+            self.poad.isHidden = !loading
+        })
+        searchView.rx.text
+        .debounce(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
+            .asObservable().subscribe(onNext: {(searchTerm) in
+            print(searchTerm)
+                guard let search = searchTerm else {return}
+                self.postsViewModel.setSearch(search: search)
+                
+                
+            
+        })
         //Do any additional setup after loading the view.
         
         
@@ -88,6 +102,8 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItemAt \(indexPath.row)")
+        guard var categoryid = postsViewModel.categories.value[indexPath.row].id else { return  }
+        postsViewModel.selectCategory(byId: categoryid)
 //        postsViewModel.
     }
     
@@ -106,5 +122,12 @@ class PostsViewController: UIViewController, UICollectionViewDelegate, UICollect
             postsViewModel.getPosts()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       tableView.deselectRow(at: indexPath, animated: true)
+        postsViewModel.showPostOnWeb(vc:self,post: postsViewModel.posts.value[indexPath.row])
+    }
+    
+    
 }
 

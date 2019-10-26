@@ -45,11 +45,14 @@ class PostsViewModel{
     var category : Variable<Int?>? = Variable(nil)
     var search: String = ""
     var postsPage = 1
+    var loadingPosts : Variable<Bool> = Variable(false)
+    
     
     func selectCategory(byId category : Int){
         self.category?.value = category
         self.search = ""
         self.postsPage = 1
+        self.posts.value = []
         getPosts()
 //        self.currentCategoryPage
     }
@@ -57,15 +60,21 @@ class PostsViewModel{
             self.category?.value = nil
               self.search = search
               self.postsPage = 1
+            self.posts.value = []
               getPosts()
     }
     
     func getPosts(){
-        if(self.postsPage<=0) {
+     
+        if(self.postsPage<=0 || loadingPosts.value) {
+            print("block getPost ")
             return
         }
+        print("getPost \(self.postsPage)")
+         loadingPosts.value = true
         let networkManager = NetworkManager()
         networkManager.getPosts(categoryId: category?.value, page: postsPage, search: search) { (posts) in
+            self.loadingPosts.value = false
             self.posts.value += posts ?? [PostElement]()
             if(posts?.count == 0){
                 self.postsPage = -1
@@ -74,5 +83,15 @@ class PostsViewModel{
             }
         }
     }
+    
+    func showPostOnWeb(vc: UIViewController,post: PostElement){
+            guard let data = post.content?.rendered else {return}
+    //                      self.dataToShow = data
+                          
+                          let webVeiwVC : WebViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "webViewVC") as! WebViewController
+                          webVeiwVC.data = data
+                              
+                          vc.present(webVeiwVC, animated: true, completion: nil)
+        }
     
 }

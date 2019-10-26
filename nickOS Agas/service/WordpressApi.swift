@@ -46,21 +46,14 @@ class NetworkManager: NSObject {
             
         }
     
-    //  @GET("posts")
-//      fun getPosts(
-//          @Query("categories") category: Long?,
-//          @Query("page") page: Int?,
-//          @Query("search") search: String?
-//
-//      ): Call<PostResponse>
-    
+
     func getPosts(
         categoryId: Int?,
         page: Int,
         search: String,
         completion: @escaping (Post?) -> Void){
   
-        var urlString = Wordpress.baseURL + Wordpress.postsUrl+Wordpress.categories
+        var urlString = Wordpress.baseURL + Wordpress.postsUrl
         if let cat = categoryId {
             urlString = urlString+Wordpress.categories+String(cat)
         }
@@ -68,7 +61,7 @@ class NetworkManager: NSObject {
         urlString = urlString+Wordpress.search+search
         print(urlString)
         AF.request(urlString).response{repsonse in
-            print(repsonse.debugDescription)
+           
                   guard let data = repsonse.data else {return}
                    
                   do {
@@ -77,7 +70,7 @@ class NetworkManager: NSObject {
                                             completion(posts)
                                         } catch let error {
                                             print(error)
-                                            completion(nil)
+                                            completion([])
                                         }
                         }
         
