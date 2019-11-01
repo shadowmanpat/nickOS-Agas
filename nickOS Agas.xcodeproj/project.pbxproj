@@ -29,6 +29,7 @@
 		49BD75A22359E95B001F458E /* nickOS_AgasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75A12359E95B001F458E /* nickOS_AgasUITests.swift */; };
 		49CC31CF236C22B700322391 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31CE236C22B700322391 /* ChatViewController.swift */; };
 		49CC31D1236C281000322391 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31D0236C281000322391 /* ChatMessage.swift */; };
+		49CC31D3236C2AAF00322391 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49CC31D2236C2AAF00322391 /* GoogleService-Info.plist */; };
 		B183D9F8994CCBDEE9C089EC /* Pods_nickOS_AgasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E904FE4A8EF5EBA7719489 /* Pods_nickOS_AgasTests.framework */; };
 		B6F2B7FC06BE67E8EEAD14F2 /* Pods_nickOS_Agas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		49BD75A32359E95B001F458E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49CC31CE236C22B700322391 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		49CC31D0236C281000322391 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		49CC31D2236C2AAF00322391 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49FD2A59EC22DC8489FCEEE9 /* Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_Agas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				497A2DAE235B3D5800077AC8 /* resources */,
 				49BD758A2359E95B001F458E /* LaunchScreen.storyboard */,
 				49BD758D2359E95B001F458E /* Info.plist */,
+				49CC31D2236C2AAF00322391 /* GoogleService-Info.plist */,
 			);
 			path = "nickOS Agas";
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BD758C2359E95B001F458E /* LaunchScreen.storyboard in Resources */,
+				49CC31D3236C2AAF00322391 /* GoogleService-Info.plist in Resources */,
 				49BD75892359E95B001F458E /* Assets.xcassets in Resources */,
 				49BD75872359E95A001F458E /* Main.storyboard in Resources */,
 			);
