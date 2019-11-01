@@ -27,6 +27,8 @@
 		49BD758C2359E95B001F458E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BD758A2359E95B001F458E /* LaunchScreen.storyboard */; };
 		49BD75972359E95B001F458E /* nickOS_AgasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75962359E95B001F458E /* nickOS_AgasTests.swift */; };
 		49BD75A22359E95B001F458E /* nickOS_AgasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD75A12359E95B001F458E /* nickOS_AgasUITests.swift */; };
+		49CC31CF236C22B700322391 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31CE236C22B700322391 /* ChatViewController.swift */; };
+		49CC31D1236C281000322391 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31D0236C281000322391 /* ChatMessage.swift */; };
 		B183D9F8994CCBDEE9C089EC /* Pods_nickOS_AgasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E904FE4A8EF5EBA7719489 /* Pods_nickOS_AgasTests.framework */; };
 		B6F2B7FC06BE67E8EEAD14F2 /* Pods_nickOS_Agas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		49BD759D2359E95B001F458E /* nickOS AgasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nickOS AgasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BD75A12359E95B001F458E /* nickOS_AgasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nickOS_AgasUITests.swift; sourceTree = "<group>"; };
 		49BD75A32359E95B001F458E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49CC31CE236C22B700322391 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		49CC31D0236C281000322391 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		49FD2A59EC22DC8489FCEEE9 /* Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_Agas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		49BD75AF2359EA7E001F458E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				49CC31CD236C228800322391 /* Chat */,
 				49BD757F2359E95A001F458E /* SceneDelegate.swift */,
 				49BD75852359E95A001F458E /* Main.storyboard */,
 				49BD75B52359EB21001F458E /* posts */,
@@ -203,6 +208,7 @@
 				497A2DAA2359F88B00077AC8 /* Categories.swift */,
 				497A2DA72359F80A00077AC8 /* PostElement.swift */,
 				497A2DA42359F78D00077AC8 /* Page.swift */,
+				49CC31D0236C281000322391 /* ChatMessage.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -240,6 +246,14 @@
 				497A2DBE235CFAF400077AC8 /* PostTableViewCell.swift */,
 			);
 			path = posts;
+			sourceTree = "<group>";
+		};
+		49CC31CD236C228800322391 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				49CC31CE236C22B700322391 /* ChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		64631248B76AB5EDEF993D21 /* Frameworks */ = {
@@ -505,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49BD75842359E95A001F458E /* PostsViewController.swift in Sources */,
+				49CC31D1236C281000322391 /* ChatMessage.swift in Sources */,
 				497A2DB8235B4B6700077AC8 /* WebViewController.swift in Sources */,
 				497A2DAB2359F88B00077AC8 /* Categories.swift in Sources */,
 				49BD75822359E95A001F458E /* HomeViewController.swift in Sources */,
@@ -517,6 +532,7 @@
 				497A2DBB235C771000077AC8 /* PostsViewModel.swift in Sources */,
 				49BD75802359E95A001F458E /* SceneDelegate.swift in Sources */,
 				497A2DA52359F78D00077AC8 /* Page.swift in Sources */,
+				49CC31CF236C22B700322391 /* ChatViewController.swift in Sources */,
 				497A2DB0235B3D8E00077AC8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
