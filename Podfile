@@ -8,6 +8,11 @@ target 'nickOS Agas' do
   pod 'Observable'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  pod 'FirebaseUI'
+  # add pods for any other desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods 
 
   # Pods for nickOS Agas
 

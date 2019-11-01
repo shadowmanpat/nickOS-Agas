@@ -30,6 +30,7 @@
 		49CC31CF236C22B700322391 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31CE236C22B700322391 /* ChatViewController.swift */; };
 		49CC31D1236C281000322391 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31D0236C281000322391 /* ChatMessage.swift */; };
 		49CC31D3236C2AAF00322391 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49CC31D2236C2AAF00322391 /* GoogleService-Info.plist */; };
+		49CC31D5236C2D6B00322391 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31D4236C2D6B00322391 /* ChatViewModel.swift */; };
 		B183D9F8994CCBDEE9C089EC /* Pods_nickOS_AgasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E904FE4A8EF5EBA7719489 /* Pods_nickOS_AgasTests.framework */; };
 		B6F2B7FC06BE67E8EEAD14F2 /* Pods_nickOS_Agas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		49CC31CE236C22B700322391 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		49CC31D0236C281000322391 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		49CC31D2236C2AAF00322391 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		49CC31D4236C2D6B00322391 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		49FD2A59EC22DC8489FCEEE9 /* Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_Agas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				49CC31CE236C22B700322391 /* ChatViewController.swift */,
+				49CC31D4236C2D6B00322391 /* ChatViewModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				49BD75772359E95A001F458E /* Frameworks */,
 				49BD75782359E95A001F458E /* Resources */,
 				14F1C884E98DEF224ADDC3D3 /* [CP] Embed Pods Frameworks */,
+				6BFED652EA0D9BCCCAF44CC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +336,7 @@
 				49BD759A2359E95B001F458E /* Frameworks */,
 				49BD759B2359E95B001F458E /* Resources */,
 				0F1E9BA8D62D2A9CC22F81BA /* [CP] Embed Pods Frameworks */,
+				BDE185EC8EA11ECCE98EF666 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -493,6 +498,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6BFED652EA0D9BCCCAF44CC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B8B6F4126BB33A1E2F01ED44 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +537,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BDE185EC8EA11ECCE98EF666 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -528,6 +567,7 @@
 				497A2DAB2359F88B00077AC8 /* Categories.swift in Sources */,
 				49BD75822359E95A001F458E /* HomeViewController.swift in Sources */,
 				497A2DAD235A178B00077AC8 /* HomeViewModel.swift in Sources */,
+				49CC31D5236C2D6B00322391 /* ChatViewModel.swift in Sources */,
 				49BD757E2359E95A001F458E /* AppDelegate.swift in Sources */,
 				497A2DBD235CCCC300077AC8 /* CategoryCollectionViewCell.swift in Sources */,
 				497A2DBF235CFAF400077AC8 /* PostTableViewCell.swift in Sources */,
