@@ -176,6 +176,7 @@
                     <connections>
                         <outlet property="LogOutBtn" destination="hEf-xe-LOk" id="zTp-Ky-dPb"/>
                         <outlet property="LoginBtn" destination="Jp4-lG-8g5" id="2T7-1Y-lTT"/>
+                        <outlet property="messegeFieldHolder" destination="doj-KW-bec" id="qLG-R0-7Wd"/>
                         <outlet property="sendBtn" destination="5Da-37-qoQ" id="y6c-pg-gT8"/>
                         <outlet property="sendBtnClicked" destination="5Da-37-qoQ" id="LNA-0g-oYt"/>
                     </connections>

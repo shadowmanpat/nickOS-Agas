@@ -31,6 +31,7 @@
 		49CC31D1236C281000322391 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31D0236C281000322391 /* ChatMessage.swift */; };
 		49CC31D3236C2AAF00322391 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49CC31D2236C2AAF00322391 /* GoogleService-Info.plist */; };
 		49CC31D5236C2D6B00322391 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31D4236C2D6B00322391 /* ChatViewModel.swift */; };
+		49CC31D8236DC62300322391 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CC31D7236DC62300322391 /* FirebaseService.swift */; };
 		B183D9F8994CCBDEE9C089EC /* Pods_nickOS_AgasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E904FE4A8EF5EBA7719489 /* Pods_nickOS_AgasTests.framework */; };
 		B6F2B7FC06BE67E8EEAD14F2 /* Pods_nickOS_Agas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,8 @@
 		49CC31D0236C281000322391 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		49CC31D2236C2AAF00322391 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49CC31D4236C2D6B00322391 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		49CC31D6236DBFE500322391 /* nickOS Agas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "nickOS Agas.entitlements"; sourceTree = "<group>"; };
+		49CC31D7236DC62300322391 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		49FD2A59EC22DC8489FCEEE9 /* Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas-nickOS AgasUITests/Pods-nickOS Agas-nickOS AgasUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE73D4CA0DCAFC2EDA1392B /* Pods_nickOS_Agas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nickOS_Agas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nickOS Agas.debug.xcconfig"; path = "Target Support Files/Pods-nickOS Agas/Pods-nickOS Agas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 		49BD757C2359E95A001F458E /* nickOS Agas */ = {
 			isa = PBXGroup;
 			children = (
+				49CC31D6236DBFE500322391 /* nickOS Agas.entitlements */,
 				49BD75B22359EAB5001F458E /* adapter */,
 				49BD75B12359EA9E001F458E /* models */,
 				49BD75B02359EA90001F458E /* service */,
@@ -203,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				497A2DB1235B3E9E00077AC8 /* WordpressApi.swift */,
+				49CC31D7236DC62300322391 /* FirebaseService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				49CC31D1236C281000322391 /* ChatMessage.swift in Sources */,
 				497A2DB8235B4B6700077AC8 /* WebViewController.swift in Sources */,
 				497A2DAB2359F88B00077AC8 /* Categories.swift in Sources */,
+				49CC31D8236DC62300322391 /* FirebaseService.swift in Sources */,
 				49BD75822359E95A001F458E /* HomeViewController.swift in Sources */,
 				497A2DAD235A178B00077AC8 /* HomeViewModel.swift in Sources */,
 				49CC31D5236C2D6B00322391 /* ChatViewModel.swift in Sources */,
@@ -751,7 +757,9 @@
 			baseConfigurationReference = 70694AB7899610DA19F612CB /* Pods-nickOS Agas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "nickOS Agas/nickOS Agas.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7LG66FXVT;
 				INFOPLIST_FILE = "nickOS Agas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -769,7 +777,9 @@
 			baseConfigurationReference = 30339FDFCB99ED2F676783D4 /* Pods-nickOS Agas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "nickOS Agas/nickOS Agas.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7LG66FXVT;
 				INFOPLIST_FILE = "nickOS Agas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

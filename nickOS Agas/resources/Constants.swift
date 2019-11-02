@@ -20,6 +20,14 @@ struct Wordpress {
     static let search = "&search="
 }
 
+struct Firebase {
+    
+    static let RC_SIGN_IN = 123
+     static let COLLECTION_PATH = "messages_nickosagas"
+}
+
+
+
 
 enum HTTPHeaderField: String {
     case authentication = "Authorization"
