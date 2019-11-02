@@ -20,7 +20,7 @@ struct Wordpress {
     static let search = "&search="
 }
 
-struct Firebase {
+struct FirebaseContants {
     
     static let RC_SIGN_IN = 123
      static let COLLECTION_PATH = "messages_nickosagas"

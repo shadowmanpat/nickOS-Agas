@@ -23,18 +23,17 @@ class ChatViewModel {
         let authState = Auth.auth().addStateDidChangeListener { (auth, user) in
             print("currentUser "+(user?.uid ?? "nill"))
             self.currentUser.value = user
+            FirebaseService.instance.getMessage()
         }
     }
     
     func launchFirebaseUI( vc: UIViewController)  {
         FirebaseService.instance.loginUser(vc : vc)
-      
-        
     }
     
     
     func logout(){
-        
+
         FirebaseService.instance.logout()
     }
 }
