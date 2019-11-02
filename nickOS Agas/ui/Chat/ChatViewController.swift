@@ -42,27 +42,14 @@ class ChatViewController: UIViewController,  FUIAuthDelegate {
     
 
     @IBAction func LogoutClicked(_ sender: Any) {
+       
+        chatViewModel.logout()
     }
     @IBAction func LoginBtnClicked(_ sender: Any) {
         print("login")
        
-//        chatViewModel.launchFirebaseUI(vc: self)
-        let authUI = FUIAuth.defaultAuthUI()
-        authUI?.delegate = self
-        let providers: [FUIAuthProvider] = [
-          FUIEmailAuth(),
-          FUIGoogleAuth(),
-//          FUIFacebookAuth(),
-        ]
-        authUI?.providers = providers
-        
-//        / Present the auth view controller and then implement the sign in callback.
-        let authViewController = authUI?.authViewController()
-        guard let authVC = authViewController else {
-            print("not authVC")
-            return
-        }
-        self.present(authVC, animated: true, completion: nil)
+        chatViewModel.launchFirebaseUI(vc: self)
+       
        
         
     }
