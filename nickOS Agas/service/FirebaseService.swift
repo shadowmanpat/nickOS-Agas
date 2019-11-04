@@ -9,6 +9,8 @@
 import Foundation
 import FirebaseUI
 import Firebase
+import RxSwift
+import RxCocoa
 
 class FirebaseService {
     
@@ -18,6 +20,7 @@ class FirebaseService {
     
     init() {
         dbPath = db.collection(FirebaseContants.COLLECTION_PATH)
+        getMessage() 
     }
     
     func loginUser(vc: UIViewController){
@@ -48,18 +51,43 @@ class FirebaseService {
               print ("Error signing out: %@", signOutError)
             }
     }
-    let firestoreMessages : [ChatMessage] = []
+    
+    let firestoreMessages : Variable<[ChatMessage]> = Variable([])
    
     func getMessage() {
-        dbPath?.addSnapshotListener { (querySnapshot, error) in
+        dbPath?.order(by: "timestamp", descending: false)
+            .addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                        print("Error fetching documents: \(error!)")
                        return
                    }
+            var newMessageList = [ChatMessage]()
             documents.forEach { (document) in
-                print("document ")
+                let message = document["message"]  as? String
+                let from_username = document["from_username"] as? String
+                let from_user_id = document["from_user_id"] as? String
+                let timestamp = document["timestamp"] as? String
+                let chatMessage =  ChatMessage(message: message, from_username: from_username, from_user_id: from_user_id, timestamp: timestamp)
+//                let chatMessage = ChatMessage(message,from_username, from_user_id, timestamp)
+                newMessageList.append(chatMessage)
+                print("document \(chatMessage.from_username)")
             }
+            self.firestoreMessages.value = newMessageList
+            
         }
+    }
+    
+    func sendMessage(message: String, userName : String?, userId: String?){
+        print("send firevese")
+//        var chatMessage = ChatMessage(message: message, from_username: userName, from_user_id: userId, timestamp: ServerValue.timestamp())
+        let chatMessage = ["message":message,
+                               "from_username": userName,
+                               "from_user_id": userId,
+                               "timestamp":FieldValue.serverTimestamp()
+            ] as [String : Any]
+        dbPath?.addDocument(data: chatMessage, completion: { (err) in
+            print(err)
+        })
     }
     
 }

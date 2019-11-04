@@ -9,9 +9,12 @@
 import Foundation
 
 
-struct  ChatMessage{
-    let message: String? = ""
-    let from_username: String? = ""
-    let from_user_id: String? = " "
-    let timestamp: Any? = nil
+struct  ChatMessage
+    
+{
+
+    var  message: String? = ""
+    var from_username: String? = ""
+    var from_user_id: String? = ""
+    var timestamp: Any? = ""
 }

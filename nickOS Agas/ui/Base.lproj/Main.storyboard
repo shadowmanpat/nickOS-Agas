@@ -135,6 +135,47 @@
                                     <action selector="LoginBtnClicked:" destination="XTV-4C-KGj" eventType="touchUpInside" id="tk5-iK-0vm"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iLU-g1-HfY">
+                                <rect key="frame" x="10" y="54" width="394" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatMessageViewCell" rowHeight="192" id="xp9-6N-vq7" customClass="ChatMessageViewCell" customModule="nickOS_Agas" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="192"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xp9-6N-vq7" id="SRr-Wq-zjc">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whB-NN-0IB">
+                                                    <rect key="frame" x="20" y="11" width="354" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlC-HO-BhG">
+                                                    <rect key="frame" x="20" y="40" width="354" height="141"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="whB-NN-0IB" secondAttribute="trailing" id="35z-L0-Vck"/>
+                                                <constraint firstItem="ZlC-HO-BhG" firstAttribute="trailing" secondItem="SRr-Wq-zjc" secondAttribute="trailingMargin" constant="8" id="K6I-fk-rvp"/>
+                                                <constraint firstItem="whB-NN-0IB" firstAttribute="leading" secondItem="SRr-Wq-zjc" secondAttribute="leadingMargin" id="TCd-ZC-lTB"/>
+                                                <constraint firstItem="ZlC-HO-BhG" firstAttribute="leading" secondItem="SRr-Wq-zjc" secondAttribute="leadingMargin" constant="8" id="TjV-5o-9ar"/>
+                                                <constraint firstItem="whB-NN-0IB" firstAttribute="top" secondItem="SRr-Wq-zjc" secondAttribute="topMargin" id="WFh-Tc-vP1"/>
+                                                <constraint firstItem="ZlC-HO-BhG" firstAttribute="bottom" secondItem="SRr-Wq-zjc" secondAttribute="bottomMargin" constant="8" id="jxX-rG-a2i"/>
+                                                <constraint firstItem="ZlC-HO-BhG" firstAttribute="top" secondItem="whB-NN-0IB" secondAttribute="bottom" constant="8" id="wzP-PO-fTY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="message" destination="ZlC-HO-BhG" id="zbo-pM-uA4"/>
+                                            <outlet property="userName" destination="whB-NN-0IB" id="zyC-du-2zu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEf-xe-LOk">
                                 <rect key="frame" x="356" y="54" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
@@ -142,13 +183,6 @@
                                     <action selector="LogoutClicked:" destination="XTV-4C-KGj" eventType="touchUpInside" id="GDm-xc-JDR"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Da-37-qoQ">
-                                <rect key="frame" x="374" y="773.5" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="MKE-Nz-WYh"/>
-                                    <constraint firstAttribute="width" constant="30" id="QzC-xZ-Afp"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doj-KW-bec">
                                 <rect key="frame" x="10" y="769" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -157,13 +191,24 @@
                                     <action selector="messageField:" destination="XTV-4C-KGj" eventType="editingDidEnd" id="EPJ-LK-Sac"/>
                                 </connections>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Da-37-qoQ">
+                                <rect key="frame" x="374" y="773.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MKE-Nz-WYh"/>
+                                    <constraint firstAttribute="width" constant="30" id="QzC-xZ-Afp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="doj-KW-bec" firstAttribute="leading" secondItem="eUv-LY-WMt" secondAttribute="leading" constant="10" id="0tg-ks-75w"/>
                             <constraint firstItem="Jp4-lG-8g5" firstAttribute="centerY" secondItem="UzK-dm-9KA" secondAttribute="centerY" id="5LT-tF-aKZ"/>
                             <constraint firstItem="Jp4-lG-8g5" firstAttribute="centerX" secondItem="UzK-dm-9KA" secondAttribute="centerX" id="NCf-jw-IJE"/>
+                            <constraint firstItem="doj-KW-bec" firstAttribute="top" secondItem="iLU-g1-HfY" secondAttribute="bottom" constant="10" id="NJW-8L-27i"/>
                             <constraint firstItem="eUv-LY-WMt" firstAttribute="bottom" secondItem="5Da-37-qoQ" secondAttribute="bottom" constant="10" id="X56-or-kLE"/>
+                            <constraint firstItem="iLU-g1-HfY" firstAttribute="top" secondItem="eUv-LY-WMt" secondAttribute="top" constant="10" id="bKE-b2-Mo2"/>
+                            <constraint firstItem="eUv-LY-WMt" firstAttribute="trailing" secondItem="iLU-g1-HfY" secondAttribute="trailing" constant="10" id="bZQ-Lg-7A6"/>
+                            <constraint firstItem="iLU-g1-HfY" firstAttribute="leading" secondItem="eUv-LY-WMt" secondAttribute="leading" constant="10" id="fgT-kk-pn4"/>
                             <constraint firstItem="eUv-LY-WMt" firstAttribute="trailing" secondItem="hEf-xe-LOk" secondAttribute="trailing" constant="10" id="hEX-Rs-VOB"/>
                             <constraint firstItem="eUv-LY-WMt" firstAttribute="bottom" secondItem="doj-KW-bec" secondAttribute="bottom" constant="10" id="o5J-SY-OHl"/>
                             <constraint firstItem="5Da-37-qoQ" firstAttribute="leading" secondItem="doj-KW-bec" secondAttribute="trailing" constant="10" id="obc-x0-eqV"/>
@@ -178,7 +223,7 @@
                         <outlet property="LoginBtn" destination="Jp4-lG-8g5" id="2T7-1Y-lTT"/>
                         <outlet property="messegeFieldHolder" destination="doj-KW-bec" id="qLG-R0-7Wd"/>
                         <outlet property="sendBtn" destination="5Da-37-qoQ" id="y6c-pg-gT8"/>
-                        <outlet property="sendBtnClicked" destination="5Da-37-qoQ" id="LNA-0g-oYt"/>
+                        <outlet property="tableVIewNew" destination="iLU-g1-HfY" id="uBs-kn-kdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxR-9d-PPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
