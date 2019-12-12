@@ -16,15 +16,15 @@ import FirebaseUI
 class ChatViewModel {
     
     
-    let currentUser:   Variable<User?> = Variable(nil)
+    let currentUser:   BehaviorRelay<User?> = BehaviorRelay<User?>(value: nil)
     var chatMessages : Variable<[ChatMessage]> = Variable([])
     
-    
+   
     
     init() {
         let authState = Auth.auth().addStateDidChangeListener { (auth, user) in
             print("currentUser "+(user?.uid ?? "nill"))
-            self.currentUser.value = user
+            self.currentUser.accept(user)
             FirebaseService.instance.getMessage()
         }
         
@@ -36,6 +36,11 @@ class ChatViewModel {
                 print("conempr")
             })
         
+        let myVariable = Variable<Bool>(true)
+           myVariable.value = false
+        let myBehaviorRelay = BehaviorRelay<Bool>(value: true)
+           myBehaviorRelay.accept(false)
+     
     }
     
     

@@ -25,7 +25,7 @@ class ChatViewController: UIViewController,  FUIAuthDelegate , UITableViewDelega
     var chatViewModel = ChatViewModel()
     
     var messages : [ChatMessage] = []
-    
+     var subscription: Disposable?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableVIewNew.delegate = self

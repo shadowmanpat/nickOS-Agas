@@ -39,8 +39,10 @@ class ChatMessageViewCell : UITableViewCell {
             message.textAlignment = .left
         }
         
-        
     }
 
+    
+  
+    
 }
 
